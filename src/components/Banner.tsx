@@ -8,12 +8,12 @@ export default function Banner() {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const [delta, setDelta] = useState(200 - Math.random() * 100);
   const period = 2000;
 
   const toRotate = [
-    'Web Developer',
-    'Front End Developer',
+    'a Web Developer',
+    'a Front-end Developer',
     'Nice to meet you!',
   ];
 
@@ -24,7 +24,7 @@ export default function Banner() {
     return () => {
       clearInterval(ticker);
     };
-  }, [text, delta]);
+  }, [text]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -43,7 +43,7 @@ export default function Banner() {
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setDelta(500);
+      setDelta(200);
     }
   };
 
@@ -51,12 +51,12 @@ export default function Banner() {
     <section className="banner" id="home">
       <Container>
         <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
+          <Col xs={12} md={6} xl={7} className='banner_text'>
             <span className="tagline">Welcome to my Portfolio</span>
-            <h1>
-              {`Hi I'm webcoded `} <span className="wrap">{text}</span>
+            <h1 className='banner_text_wrap'>
+              {`Hi I'm webcoded `} <div className="wrap">{text}</div>
             </h1>
-            <p>
+            <p className='banner_text_p'>
               An IT guy focusing on front-end Web development fueled by an
               unrestricted passion and fascination in the field of Web
               developmnent.
