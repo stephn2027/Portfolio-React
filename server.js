@@ -1,10 +1,13 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
-const app = express();
-// server used to send send emails
-const port = 5000;
 
+// server used to send send emails
+const app = express();
+const cors = require('cors');
+const port = 3001;
+app.use(express.json());
+app.use(cors());
 app.listen(port, () => console.log(`Server Running on port: ${port}`));
 
 let transporter = nodemailer.createTransport({
@@ -27,26 +30,43 @@ transporter.verify((error, success) => {
   }
 });
 
-
-// router.post('/contact', (req, res) => {
-//   const name = req.body.firstName + req.body.lastName;
-//   const email = req.body.email;
-//   const message = req.body.message;
-//   const phone = req.body.phone;
-//   const mail = {
-//     from: name,
-//     to: 'stephn2027@gmail.com',
-//     subject: 'Contact Form Submission - Portfolio',
-//     html: `<p>Name: ${name}</p>
-//            <p>Email: ${email}</p>
-//            <p>Phone: ${phone}</p>
-//            <p>Message: ${message}</p>`,
+// app.post("/send", function (req, res) {
+//   let mailOptions = {
+//     from: "test@gmail.com",
+//     to: process.env.EMAIL,
+//     subject: "Nodemailer API",
+//     text: "Hi from your nodemailer API",
 //   };
-//   transporter.sendMail(mail, (error) => {
-//     if (error) {
-//       res.json(error);
+ 
+//   transporter.sendMail(mailOptions, function (err, data) {
+//     if (err) {
+//       console.log("Error " + err);
 //     } else {
-//       res.json({ code: 200, status: 'Message Sent' });
+//       console.log("Email sent successfully");
+//       res.json({ status: "Email sent" });
 //     }
 //   });
-// });
+//  });
+
+app.post('/send', (req, res) => {
+  const name = req.body.firstName + req.body.lastName;
+  const email = req.body.email;
+  const message = req.body.message;
+  const phone = req.body.phone;
+  let mailOptions = {
+    from: name,
+    to: process.env.EMAIL,
+    subject: 'Contact Form Submission - Portfolio',
+    html: `<p>Name: ${name}</p>
+           <p>Email: ${email}</p>
+           <p>Phone: ${phone}</p>
+           <p>Message: ${message}</p>`,
+  };
+  transporter.sendMail(mailOptions, (error) => {
+    if (error) {
+      res.json(error);
+    } else {
+      res.json({ code: 200, status: 'Message Sent' });
+    }
+  });
+});

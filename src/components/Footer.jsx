@@ -10,11 +10,9 @@ export default function Footer() {
   return (
     <footer className="footer">
       <Container>
-        <Row className="align-items-center">
-          <Col sm={6}>
-            <img src={logo} alt="logo" />
-          </Col>
-          <Col sm={6} className='text-center text-sm-end'>
+        <Row className="align-items-center footer__row">
+        
+          <Col lg={12} className='text-center text-md-end'>
           <div className='social-icon'>
             <a href=""><img src={navIcon1} alt="" /></a>
             <a href=""><img src={navIcon2} alt="" /></a>
