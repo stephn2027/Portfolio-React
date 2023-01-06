@@ -7,7 +7,7 @@ import navIcon3 from '../assets/img/nav-icon3.svg';
 import '../styles/navbar.scss';
 
 export default function NavBar() {
-  const [activeLink, setActiveLink] = useState('about');
+  const [activeLink, setActiveLink] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -20,12 +20,12 @@ export default function NavBar() {
     return () => window.addEventListener('scroll', onScroll);
   }, []);
 
-  const onUpdateLink = (value: string) => setActiveLink(value);
+  const onUpdateLink = (value) => setActiveLink(value);
 
   return (
     <Navbar expand="lg" className={isScrolled ? 'scrolled' : ''}>
       <Container>
-        <Navbar.Brand href="#about">
+        <Navbar.Brand href="#home">
           <img src={logo} alt="Logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -34,29 +34,29 @@ export default function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link
-              href="#about"
+              href="#home"
               className={
-                activeLink === 'about' ? 'active navbar-link' : 'navbar-link'
+                activeLink === 'home' ? 'active navbar-link' : 'navbar-link'
               }
-              onClick={() => onUpdateLink('about')}
+              onClick={() => onUpdateLink('home')}
             >
               About
             </Nav.Link>
             <Nav.Link
               href="#skills"
               className={
-                activeLink === 'about' ? 'active navbar-link' : 'navbar-link'
+                activeLink === 'home' ? 'active navbar-link' : 'navbar-link'
               }
               onClick={() => onUpdateLink('skills')}
             >
               Skills
             </Nav.Link>
             <Nav.Link
-              href="#projects"
+              href="#project"
               className={
-                activeLink === 'about' ? 'active navbar-link' : 'navbar-link'
+                activeLink === 'home' ? 'active navbar-link' : 'navbar-link'
               }
-              onClick={() => onUpdateLink('projects')}
+              onClick={() => onUpdateLink('project')}
             >
               Projects
             </Nav.Link>

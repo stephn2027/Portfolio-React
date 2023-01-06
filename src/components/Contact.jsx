@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import contactImg from '../assets/img/contact-img.svg';
+import '../styles/contact.scss';
 
 const formInitialDetails = {
   firstName: '',
@@ -30,12 +31,14 @@ export default function Contact() {
     setButtonText('Send');
     let result = response.json();
     setFormDetails(formInitialDetails);
-    result.code === 200
-      ? setStatus({ success: true, message: 'Message Sent Successfully!' })
-      : setStatus({
-          success: false,
-          message: 'Something went wrong, please try again',
-        });
+    if (result.code === 200) {
+      setStatus({ success: true, message: 'Message Sent Successfully!' });
+    } else {
+      setStatus({
+        success: false,
+        message: 'Something went wrong, please try again',
+      });
+    }
   };
 
   return (
@@ -86,7 +89,7 @@ export default function Contact() {
                     rows="6"
                     value={formDetails.message}
                     placeholder="Message"
-                    onChange={(e) => onFormUpdate('email', e.target.value)}
+                    onChange={(e) => onFormUpdate('message', e.target.value)}
                   />
                   <button type="submit">
                     <span>{buttonText}</span>
