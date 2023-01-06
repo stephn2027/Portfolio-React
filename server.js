@@ -1,49 +1,52 @@
-import express, { Router, json } from 'express';
-import cors from 'cors';
-import { createTransport } from 'nodemailer';
-
-// server used to send send emails
+const express = require('express');
+const nodemailer = require('nodemailer');
+require('dotenv').config();
 const app = express();
-app.use(cors());
-app.use(json());
-app.use('/', Router);
-app.listen(5000, () => console.log('Server Running'));
+// server used to send send emails
+const port = 5000;
 
-const contactEmail = createTransport({
+app.listen(port, () => console.log(`Server Running on port: ${port}`));
+
+let transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'stephn2027@gmail.com',
-    pass: 'injxjdlauasmyfjh',
+    type: 'OAuth2',
+    user: process.env.EMAIL,
+    pass: process.env.WORD,
+    clientId: process.env.OAUTH_CLIENTID,
+    clientSecret: process.env.OAUTH_CLIENT_SECRET,
+    refreshToken: process.env.OAUTH_REFRESH_TOKEN,
   },
 });
 
-contactEmail.verify((error) => {
+transporter.verify((error, success) => {
   if (error) {
     console.log(error);
   } else {
-    console.log('Ready to Send');
+    console.log(`===Server is ready to take messages: ${success}===`);
   }
 });
 
-Router.post('/contact', (req, res) => {
-  const name = req.body.firstName + req.body.lastName;
-  const email = req.body.email;
-  const message = req.body.message;
-  const phone = req.body.phone;
-  const mail = {
-    from: name,
-    to: 'stephn2027@gmail.com',
-    subject: 'Contact Form Submission - Portfolio',
-    html: `<p>Name: ${name}</p>
-           <p>Email: ${email}</p>
-           <p>Phone: ${phone}</p>
-           <p>Message: ${message}</p>`,
-  };
-  contactEmail.sendMail(mail, (error) => {
-    if (error) {
-      res.json(error);
-    } else {
-      res.json({ code: 200, status: 'Message Sent' });
-    }
-  });
-});
+
+// router.post('/contact', (req, res) => {
+//   const name = req.body.firstName + req.body.lastName;
+//   const email = req.body.email;
+//   const message = req.body.message;
+//   const phone = req.body.phone;
+//   const mail = {
+//     from: name,
+//     to: 'stephn2027@gmail.com',
+//     subject: 'Contact Form Submission - Portfolio',
+//     html: `<p>Name: ${name}</p>
+//            <p>Email: ${email}</p>
+//            <p>Phone: ${phone}</p>
+//            <p>Message: ${message}</p>`,
+//   };
+//   transporter.sendMail(mail, (error) => {
+//     if (error) {
+//       res.json(error);
+//     } else {
+//       res.json({ code: 200, status: 'Message Sent' });
+//     }
+//   });
+// });
