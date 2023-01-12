@@ -5,14 +5,14 @@ import meter1 from '../assets/img/meter1.svg';
 import meter2 from '../assets/img/meter2.svg';
 import meter3 from '../assets/img/meter3.svg';
 import colorSharp from '../assets/img/color-sharp.png';
+import SKILL_ITEMS from '../assets/constants/skills';
 import '../styles/skills.scss';
 import 'react-multi-carousel/lib/styles.css';
 
 export default function Skills() {
-  const skillsValue = '80';
+  const skills = SKILL_ITEMS;
   const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
+    XXlargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -48,35 +48,24 @@ export default function Skills() {
                 infinite={true}
                 className="skill-slider"
               >
-                <div className="item">
-                  <img src={meter1} alt="" />
-                  <h5>Web Development</h5>
-                </div>
-                <div className="item">
-                  <img src={meter2} alt="" />
-                  <h5>Web Development</h5>
-                </div>
-                <div className="item">
-                  <img src={meter3} alt="" />
-                  <h5>Web Development</h5>
-                </div>
-                <div className="item">
-                  <img src={meter1} alt="" />
-                  <h5>Web Development</h5>
-                </div>
-                <div className="item">
-                  <div
-                    className="radial-progress"
-                    style={{
-                      '--value': skillsValue,
-                      '--size': '10rem',
-                      '--thickness': '1rem',
-                    }}
-                  >
-                    {skillsValue}%
-                  </div>
-                  <h5>Web Development</h5>
-                </div>
+                {skills.map((skill) => {
+                  return (
+                    <div className="item">
+                      <div
+                        className="radial-progress"
+                        style={{
+                          '--value': skill.percent,
+                          '--size': '7rem',
+                          '--thickness': '0.7rem',
+                        }}
+                      >
+                        {skill.percent}%
+                      </div>
+                      <h5>{skill.title}</h5>
+                    </div>
+                  );
+                })}
+                
               </Carousel>
             </div>
           </Col>

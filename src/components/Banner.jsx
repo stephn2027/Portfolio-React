@@ -55,7 +55,7 @@ export default function Banner() {
     <Router>
       <section className="banner" id="home">
         <Container>
-          <Row className="align-items-center">
+          <Row className=" d-flex align-items-start">
             <Col xs={12} md={6} xl={7} className="banner_text">
               <TrackVisibility>
                 {({ isVisible }) => (
@@ -71,9 +71,13 @@ export default function Banner() {
                       {`Hi I'm Stephen `} <div className="wrap">{text}</div>
                     </h1>
                     <p className="banner_text_p">
-                      An IT guy focusing on front-end Web development fueled by
-                      an unrestricted passion and fascination in the field of
-                      Web developmnent.
+                      I’m a Tokyo based freelance web developer, passionate
+                      about creating dynamic, simple, usable and engaging user
+                      experience for the web. <br></br> ‍Over the years I worked on web
+                      development skills while using the latest development
+                      principles and techniques. I pride myself on relaible
+                      communication with my colleagues and clients and easy to
+                      work with.
                     </p>
                     <HashLink to="#connect">
                       <button onClick={() => console.log('connect')}>
@@ -84,7 +88,7 @@ export default function Banner() {
                 )}
               </TrackVisibility>
             </Col>
-            <Col xs={12} md={6} xl={5}>
+            <Col xs={12} md={6} xl={5} className="header_img">
               <img src={headerImg} alt="Header Img" />
             </Col>
           </Row>

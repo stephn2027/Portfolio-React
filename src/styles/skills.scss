@@ -7,7 +7,7 @@
         border-radius: 64px;
         text-align: center;
         padding: 60px 50px;
-        margin-top: -60px;
+        margin-top: -45px;
     }
 
     h2 {
@@ -32,11 +32,15 @@
             width: 50%;
             margin: 0 auto 15px auto;
         }
+        .item{
+            margin: 1rem;
+        }
 
         .radial-progress {
             margin: 0 auto 15px auto;
-            font-size: 1.7rem;
-            font-weight: bolder;
+            font-size: 1.3rem;
+            font-weight: 700;
+            
         }
 
         .radial-progress:before {
