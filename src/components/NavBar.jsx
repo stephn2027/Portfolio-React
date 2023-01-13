@@ -66,13 +66,25 @@ export default function NavBar() {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://www.linkedin.com/in/stephen-uy-90268a209/">
+                <a
+                  href="https://www.linkedin.com/in/stephen-uy-90268a209/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={navIcon1} alt="" />
                 </a>
-                <a href="https://www.instagram.com/stephnuy/">
+                <a
+                  href="https://www.instagram.com/stephnuy/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={navIcon3} alt="" />
                 </a>
-                <a href="https://github.com/stephn2027">
+                <a
+                  href="https://github.com/stephn2027"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={navIcon2} alt="" />
                 </a>
               </div>

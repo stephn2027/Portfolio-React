@@ -5,36 +5,38 @@ import colorSharp2 from '../assets/img/color-sharp2.png';
 import projImg1 from '../assets/img/project-img1.png';
 import projImg2 from '../assets/img/project-img2.png';
 import projImg3 from '../assets/img/project-img3.png';
+import ProjectDetails from '../assets/constants/projects';
 import '../styles/project.scss';
 
 export default function Projects() {
-  const projects = [
-    {
-      title: 'business Startup',
-      description: 'Design and Development',
-      imgUrl: projImg1,
-    },
-    {
-      title: 'business Startup',
-      description: 'Design and Development',
-      imgUrl: projImg2,
-    },
-    {
-      title: 'business Startup',
-      description: 'Design and Development',
-      imgUrl: projImg3,
-    },
-    {
-      title: 'business Startup',
-      description: 'Design and Development',
-      imgUrl: projImg1,
-    },
-    {
-      title: 'business Startup',
-      description: 'Design and Development',
-      imgUrl: projImg2,
-    },
-  ];
+  const projects = ProjectDetails;
+  // const projects = [
+  //   {
+  //     title: 'business Startup',
+  //     description: 'Design and Development',
+  //     imgUrl: projImg1,
+  //   },
+  //   {
+  //     title: 'business Startup',
+  //     description: 'Design and Development',
+  //     imgUrl: projImg2,
+  //   },
+  //   {
+  //     title: 'business Startup',
+  //     description: 'Design and Development',
+  //     imgUrl: projImg3,
+  //   },
+  //   {
+  //     title: 'business Startup',
+  //     description: 'Design and Development',
+  //     imgUrl: projImg1,
+  //   },
+  //   {
+  //     title: 'business Startup',
+  //     description: 'Design and Development',
+  //     imgUrl: projImg2,
+  //   },
+  // ];
   return (
     <section className="project" id="project">
       <Container>
@@ -42,10 +44,7 @@ export default function Projects() {
           <Col>
             <h2>Projects</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              enim iste veritatis minima perspiciatis eius repellendus, tempora
-              similique suscipit deserunt. Rem eius quasi sit voluptatem
-              deleniti cumque reiciendis cupiditate magnam.
+            Here you will find some of the personal and colab projects that I created with each project containing its own description. 
             </p>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav
@@ -82,16 +81,10 @@ export default function Projects() {
                   </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="second">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Laudantium, accusantium minima explicabo quaerat quas fugiat
-                  distinctio eveniet nisi debitis deserunt, doloremque fugit
-                  facere mollitia natus iste maxime amet eaque at.
+                 <h3 className='tab-pane_desc'>Yup. I have to create more projects.</h3> 
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Laudantium, accusantium minima explicabo quaerat quas fugiat
-                  distinctio eveniet nisi debitis deserunt, doloremque fugit
-                  facere mollitia natus iste maxime amet eaque at.
+                 <h3 className='tab-pane_desc'>A bit of a stretch but will fill this space soon. 😊</h3> 
                 </Tab.Pane>
               </Tab.Content>
             </Tab.Container>

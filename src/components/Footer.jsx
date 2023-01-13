@@ -11,13 +11,30 @@ export default function Footer() {
     <footer className="footer">
       <Container>
         <Row className="align-items-center footer__row">
-        
-          <Col lg={12} className='text-center text-md-end'>
-          <div className='social-icon'>
-            <a href=""><img src={navIcon1} alt="" /></a>
-            <a href=""><img src={navIcon2} alt="" /></a>
-            <a href=""><img src={navIcon3} alt="" /></a>
-          </div>
+          <Col lg={12} className="text-center text-md-end">
+            <div className="social-icon">
+              <a
+                href="https://www.linkedin.com/in/stephen-uy-90268a209/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={navIcon1} alt="" />
+              </a>
+              <a
+                href="https://www.instagram.com/stephnuy/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={navIcon3} alt="" />
+              </a>
+              <a
+                href="https://github.com/stephn2027"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={navIcon2} alt="" />
+              </a>
+            </div>
             <p>CopyRight 2023. All Rights Reserved</p>
           </Col>
         </Row>

@@ -71,11 +71,11 @@ export default function Banner() {
                       {`Hi I'm Stephen `} <div className="wrap">{text}</div>
                     </h1>
                     <p className="banner_text_p">
-                      I’m a Tokyo based freelance web developer, passionate
+                      I’m a Tokyo based freelance web developer. Passionate
                       about creating dynamic, simple, usable and engaging user
                       experience for the web. <br></br> ‍Over the years I worked on web
                       development skills while using the latest development
-                      principles and techniques. I pride myself on relaible
+                      principles and techniques. I pride myself on reliable
                       communication with my colleagues and clients and easy to
                       work with.
                     </p>
