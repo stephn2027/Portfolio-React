@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import contactImg from '../assets/img/contact-img.svg';
+import contactImg from '../assets/img/contact-octopus.png';
 import '../styles/contact.scss';
 
 export default function Contact() {

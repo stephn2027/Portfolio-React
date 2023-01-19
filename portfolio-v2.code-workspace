@@ -5,7 +5,12 @@
 		},
 		{
 			"path": "../../portfolio"
+		},
+		{
+			"path": "../../FCCweb"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "FCCweb"
+	}
 }

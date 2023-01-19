@@ -11,31 +11,37 @@ const ProjectsDetails = [
       title: 'Team Devs',
       description: 'React + Vite + TypeScript + Tailwind',
       imgUrl: proj1,
+      projectUrl:'https://github.com/Taching/vite-starter/tree/develop',
     },
     {
       title: 'Car Navigation and Rental',
       description: 'React + Bootstrap + Axios + Leaflet',
       imgUrl: proj2,
+      projectUrl:'https://car-navigation.vercel.app/',
     },
     {
       title: 'Little Sips Cafe',
       description: 'React + HTML + CSS + GSAP',
       imgUrl: proj3,
+      projectUrl:"https://little-sips.vercel.app/",
     },
     {
       title: 'Game Shop Online',
       description: 'React + Next.js + GraphCMS',
       imgUrl: proj4,
+      projectUrl:'https://gameshop.vercel.app',
     },
     {
       title: 'First Portfolio',
       description: 'HTML + CSS + Vanilla JS',
       imgUrl: proj5,
+      projectUrl:'https://stephenuy.vercel.app',
     },
     {
         title: 'City Population Search',
         description: 'HTML + CSS + Vanilla JS',
         imgUrl: proj6,
+        projectUrl:'https://stephn2027.github.io/FCCweb/myProjects/citySearch/index.html',
       },
 
   ];
