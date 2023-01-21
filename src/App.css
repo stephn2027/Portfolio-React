@@ -19,6 +19,21 @@
 }
 
 /************ Default Css ************/
+:root{
+  --black:#261a27;
+  --pink:#d790a2;
+  --magenta:#7ba8b1;
+  --woody-brown:#4a293f;
+  --dirty-purple:#734964;
+  --magenta-red:#b23674;
+  --faded-purple:#88769e;
+  --light-purple:#aa5db6;
+  --mid-grey:#575466;
+  --davy-grey:#565454;
+  --gold:#deb992;
+  --mid-blue:#001f33;
+
+}
 * {
   margin: 0;
   padding: 0;
@@ -38,6 +53,7 @@ body {
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
+
 
 h1,
 h2,

@@ -3,11 +3,11 @@
     position: relative;
 
     .skill-box {
-        background-color: #151515;
+        background-color: var(--mid-blue);
         border-radius: 64px;
         text-align: center;
         padding: 60px 50px;
-        margin-top: -45px;
+        margin-top: -2rem;
     }
 
     h2 {
