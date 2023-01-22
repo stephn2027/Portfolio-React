@@ -1,6 +1,7 @@
 .skill {
     padding: 0 0 50px 0;
     position: relative;
+    background-color:rgba(0, 7, 14, 0.984);
 
     .skill-box {
         background-color: var(--mid-blue);
@@ -13,6 +14,7 @@
     h2 {
         font-size: 45px;
         font-weight: 700;
+        color: var(--gold);
     }
 
     p {
@@ -34,6 +36,9 @@
         }
         .item{
             margin: 1rem;
+            h5{
+                color: var(--gold);
+            }
         }
 
         .radial-progress {
@@ -45,7 +50,7 @@
 
         .radial-progress:before {
 
-            color: #680d71;
+            color: #840a8f;
             top: 0px;
             right: 0px;
             bottom: 0px;

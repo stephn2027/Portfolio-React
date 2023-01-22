@@ -48,7 +48,7 @@ export default function NavBar() {
               <Nav.Link
                 href="#skills"
                 className={
-                  activeLink === 'home' ? 'active navbar-link' : 'navbar-link'
+                  activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'
                 }
                 onClick={() => onUpdateLink('skills')}
               >
@@ -57,7 +57,7 @@ export default function NavBar() {
               <Nav.Link
                 href="#project"
                 className={
-                  activeLink === 'home' ? 'active navbar-link' : 'navbar-link'
+                  activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'
                 }
                 onClick={() => onUpdateLink('project')}
               >

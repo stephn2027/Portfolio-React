@@ -9,14 +9,14 @@ nav.navbar {
   }
   nav.navbar.scrolled {
     padding: 0px 0;
-    background-color: #121212;
+    background-color: var(--mid-blue);
   }
   nav.navbar a.navbar-brand {
       width: 9%;
   }
   nav.navbar .navbar-nav .nav-link.navbar-link {
     font-weight: 400;
-    color: #fff !important;
+    color: #fff;
     letter-spacing: 0.8px;
     padding: 0 25px;
     font-size: 18px;
@@ -24,6 +24,7 @@ nav.navbar {
   }
   nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
   nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+      color:var(--gold);
       opacity: 1;
   }
   span.navbar-text {
@@ -51,7 +52,7 @@ nav.navbar {
       width: 42px;
       height: 42px;
       position: absolute;
-      background-color: #ffffff;
+      background-color: var(--gold);
       border-radius: 50%;
       transform: scale(0);
       transition: 0.3s ease-in-out;
@@ -86,7 +87,7 @@ nav.navbar {
     width: 0%;
     height: 100%;
     position: absolute;
-    background-color: #fff;
+    background-color: var(--gold);
     left: 0;
     top: 0;
     z-index: -1;

@@ -35,10 +35,10 @@ export default function Skills() {
             <div className="skill-box">
               <h2>Skills</h2>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Quaerat, illum dolores libero a impedit ullam enim repellendus
-                quibusdam quod. Reiciendis itaque sint explicabo necessitatibus
-                corporis quibusdam, cupiditate eum enim architecto.
+                Build client-side applications with modern features like SPA and
+                maintain semantic coding style among other best practices for
+                SEO optimization. Use modern tech such as Next.js,
+                TailwindCSS, GraphCMS, TypeScript and GSAP.
               </p>
               <Carousel
                 responsive={responsive}
@@ -62,7 +62,6 @@ export default function Skills() {
                     </div>
                   );
                 })}
-                
               </Carousel>
             </div>
           </Col>
