@@ -62,7 +62,7 @@ export default function Banner() {
                   <div
                     className={
                       isVisible
-                        ? 'animate__animated animate__fadeIn animate__slow'
+                        ? 'animate__animated animate__fadeIn animate__slower'
                         : ''
                     }
                   >
@@ -73,11 +73,11 @@ export default function Banner() {
                     <p className="banner_text_p">
                       I’m a Tokyo based freelance web developer. Passionate
                       about creating dynamic, simple, usable and engaging user
-                      experience for the web. <br></br> ‍Over the years I worked on web
-                      development skills while using the latest development
-                      principles and techniques. I pride myself on reliable
-                      communication with my colleagues and clients and easy to
-                      work with.
+                      experience for the web. <br></br> ‍Over the years I worked
+                      on web development skills while using the latest
+                      development principles and techniques. I pride myself on
+                      reliable communication with my colleagues and clients and
+                      easy to work with.
                     </p>
                     <HashLink to="#connect">
                       <button onClick={() => console.log('connect')}>
@@ -89,7 +89,17 @@ export default function Banner() {
               </TrackVisibility>
             </Col>
             <Col xs={12} md={6} xl={5} className="header_img">
-              <img src={headerImg} alt="Header Img" />
+              <TrackVisibility>
+                {({ isVisible }) => (
+                  <div
+                    className={
+                      isVisible ? 'animate__animated animate__flipInY animate__slow' : ''
+                    }
+                  >
+                    <img src={headerImg} alt="Header Img" />
+                  </div>
+                )}
+              </TrackVisibility>
             </Col>
           </Row>
         </Container>

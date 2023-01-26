@@ -7,6 +7,7 @@ import projImg2 from '../assets/img/project-img2.png';
 import projImg3 from '../assets/img/project-img3.png';
 import ProjectDetails from '../assets/constants/projects';
 import '../styles/project.scss';
+import TrackVisibility from 'react-on-screen';
 
 export default function Projects() {
   const projects = ProjectDetails;
@@ -16,11 +17,25 @@ export default function Projects() {
       <Container>
         <Row>
           <Col>
-            <h2>Projects</h2>
-            <p>
-              Here you will find some of the personal and colab projects that I
-              created with each project containing its own description.
-            </p>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible
+                      ? 'animate__animated animate__fadeIn animate__slower'
+                      : ''
+                  }
+                >
+                  <h2>Projects</h2>
+                  <p>
+                    Here you will find some of the personal and colab projects
+                    that I created with each project containing its own
+                    description.
+                  </p>
+                </div>
+              )}
+            </TrackVisibility>
+
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav
                 variant="pills"
