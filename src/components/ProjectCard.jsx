@@ -16,7 +16,7 @@ export default function ProjectCard({
             className={
               isVisible
                 ? 'animate__animated animate__flipInY'
-                : ''
+                : 'animate__animated animate__flipOutY'
             }
           >
             <div className="proj-imgbx">

@@ -1,13 +1,10 @@
 import React from 'react';
 import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
+import TrackVisibility from 'react-on-screen';
 import ProjectCard from './ProjectCard';
 import colorSharp2 from '../assets/img/color-sharp2.png';
-import projImg1 from '../assets/img/project-img1.png';
-import projImg2 from '../assets/img/project-img2.png';
-import projImg3 from '../assets/img/project-img3.png';
 import ProjectDetails from '../assets/constants/projects';
 import '../styles/project.scss';
-import TrackVisibility from 'react-on-screen';
 
 export default function Projects() {
   const projects = ProjectDetails;
@@ -17,51 +14,54 @@ export default function Projects() {
       <Container>
         <Row>
           <Col>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible
-                      ? 'animate__animated animate__fadeIn animate__slower'
-                      : ''
-                  }
-                >
-                  <h2>Projects</h2>
-                  <p>
-                    Here you will find some of the personal and colab projects
-                    that I created with each project containing its own
-                    description.
-                  </p>
-                </div>
-              )}
-            </TrackVisibility>
-
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
-              <Nav
-                variant="pills"
-                id="pills-tab"
-                className="nav-pills mb-5 justify-content-center align-items-center"
-              >
-                <Nav.Item>
-                  <Nav.Link
-                    eventKey="first"
-                    color="primary"
-                    id="projects-tabs-tab-first"
+              <TrackVisibility>
+                {({ isVisible }) => (
+                  <div
+                    className={
+                      isVisible
+                        ? 'animate__animated animate__fadeIn animate__slower'
+                        : 'animate__animated animate__fadeOut'
+                    }
                   >
-                    Tab 1
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="second" id="projects-tabs-tab-second">
-                    Tab2 2
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="third" id="projects-tabs-tab-third">
-                    Tab 3
-                  </Nav.Link>
-                </Nav.Item>
-              </Nav>
+                    <h2>Projects</h2>
+                    <p>
+                      Here you will find some of the personal and colab projects
+                      that I created with each project containing its own
+                      description.
+                    </p>
+                    <Nav
+                      variant="pills"
+                      id="pills-tab"
+                      className="nav-pills mb-5 justify-content-center align-items-center"
+                    >
+                      <Nav.Item>
+                        <Nav.Link
+                          eventKey="first"
+                          color="primary"
+                          id="projects-tabs-tab-first"
+                        >
+                          Tab 1
+                        </Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link
+                          eventKey="second"
+                          id="projects-tabs-tab-second"
+                        >
+                          Tab2 2
+                        </Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="third" id="projects-tabs-tab-third">
+                          Tab 3
+                        </Nav.Link>
+                      </Nav.Item>
+                    </Nav>
+                  </div>
+                )}
+              </TrackVisibility>
+
               <Tab.Content>
                 <Tab.Pane eventKey="first">
                   <Row>

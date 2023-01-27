@@ -40,7 +40,7 @@ export default function Skills() {
                     className={
                       isVisible
                         ? 'animate__animated animate__fadeIn animate__slower'
-                        : ''
+                        : 'animate__animated animate__fadeOut'
                     }
                   >
                     <h2>Skills</h2>
@@ -67,7 +67,7 @@ export default function Skills() {
                   className={
                     isVisible
                       ? 'animate__animated animate__slideInRight animate__slow'
-                      : ''
+                      : 'animate__animated animate__slideOutRight animate__slow'
                   }
                 >
                    <div
