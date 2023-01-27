@@ -23,7 +23,7 @@ const ProjectsDetails = [
       title: 'Little Sips Cafe',
       description: 'React + HTML + CSS + GSAP',
       imgUrl: proj3,
-      projectUrl:"https://little-sips.vercel.app/",
+      projectUrl:"https://littlesips.vercel.app/",
     },
     {
       title: 'Game Shop Online',
