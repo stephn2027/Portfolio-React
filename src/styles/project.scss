@@ -14,7 +14,7 @@
 
 .project p {
   color: #B8B8B8;
-  font-size: 18px;
+  font-size: clamp(.8rem, .5rem + .8vw, 1.5rem);
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin: 14px auto 30px auto;
