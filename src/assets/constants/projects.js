@@ -38,10 +38,10 @@ const ProjectsDetails = [
       projectUrl:'https://stephenuy.vercel.app',
     },
     {
-        title: 'City Population Search',
-        description: 'HTML + CSS + Vanilla JS',
+        title: 'Temperature Converter',
+        description: 'HTML + CSS + JS + React',
         imgUrl: proj6,
-        projectUrl:'https://stephn2027.github.io/FCCweb/myProjects/citySearch/index.html',
+        projectUrl:'https://temp-convert-app.vercel.app',
       },
 
   ];

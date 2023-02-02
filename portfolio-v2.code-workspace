@@ -8,9 +8,12 @@
 		},
 		{
 			"path": "../../FCCweb"
+		},
+		{
+			"path": "../temp-convert"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "portfolio"
+		"liveServer.settings.multiRootWorkspaceName": "temp-convert"
 	}
 }
