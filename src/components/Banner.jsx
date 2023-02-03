@@ -63,7 +63,7 @@ export default function Banner() {
                     className={
                       isVisible
                         ? 'animate__animated animate__fadeIn animate__slower'
-                        : ''
+                        : 'animate__animated animate__fadeOut animate__slower'
                     }
                   >
                     <span className="tagline">Welcome to my Portfolio</span>
@@ -93,7 +93,9 @@ export default function Banner() {
                 {({ isVisible }) => (
                   <div
                     className={
-                      isVisible ? 'animate__animated animate__flipInY animate__slow' : ''
+                      isVisible
+                        ? 'animate__animated animate__flipInY animate__slow'
+                        : 'animate__animated animate__flipOutY'
                     }
                   >
                     <img src={headerImg} alt="Header Img" />

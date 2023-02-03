@@ -60,32 +60,31 @@ export default function Skills() {
               >
                 {skills.map((skill) => {
                   return (
-                    <div className="item">
                     <TrackVisibility>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible
-                      ? 'animate__animated animate__slideInRight animate__slow'
-                      : 'animate__animated animate__slideOutRight animate__slow'
-                  }
-                >
-                   <div
-                        className="radial-progress"
-                        style={{
-                          '--value': skill.percent,
-                          '--size': '7rem',
-                          '--thickness': '0.7rem',
-                        }}
-                      >
-                        {skill.percent}%
-                      </div>
-                      <h5>{skill.title}</h5>
-                </div>
-              )}
-            </TrackVisibility>
-                     
-                    </div>
+                      {({ isVisible }) => (
+                        <div
+                          className={
+                            isVisible
+                              ? 'animate__animated animate__slideInRight animate__slow'
+                              : 'animate__slideOutRight animate__slow'
+                          }
+                        >
+                          <div className="item">
+                            <div
+                              className="radial-progress"
+                              style={{
+                                '--value': skill.percent,
+                                '--size': '7rem',
+                                '--thickness': '0.7rem',
+                              }}
+                            >
+                              {skill.percent}%
+                            </div>
+                            <h5>{skill.title}</h5>
+                          </div>
+                        </div>
+                      )}
+                    </TrackVisibility>
                   );
                 })}
               </Carousel>
