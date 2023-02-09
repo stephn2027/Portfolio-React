@@ -1,5 +1,5 @@
 .footer {
-    padding: 50px 0 30px 0;
+    
     background-image: url('../assets/img/bg2.png');
     background-position: center center;
     background-size:cover;
@@ -9,6 +9,7 @@
 .footer__row{
    align-self:end;
 }
+
 
 
 
@@ -23,3 +24,12 @@
     letter-spacing: 0.5px;
     margin-top: 20px;
 }
+@media (max-width:549px) {
+    .social-icon {
+     justify-items: end;
+     margin-right: -6rem;
+    }
+    .footer {
+        padding: 20px 0 10px 0;
+    }
+  }

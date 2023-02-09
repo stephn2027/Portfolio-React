@@ -7,14 +7,13 @@
   background-repeat: no-repeat;
   display: flex;
   height: 100vh;
-  
 
   &_text {
 
-    height: 100%;
+    height: 90%;
 
     &_wrap {
-      height: 68vh;
+      height: 38vh;
 
     }
 
@@ -34,12 +33,44 @@
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
-  
+
+}
+
+@media (max-width: 769px) {
+  .banner {
+    height: 100%;
+    padding-top: 5rem;
+    .d-flex {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .tagline {
+      display: none;
+    }
+
+    h1 {
+      font-weight: 500;
+    }
+    p{
+      font-size: 2px;
+    }
+
+    img {
+      width: clamp(10rem, 10rem + 10vw, 20rem);
+      margin-inline: auto;
+      z-index: -1;
+    }
+
+  }
+
+
+
 }
 
 .banner h1 {
-  font-size: clamp(2rem, 2vw + 1.5rem, 5rem);
-  font-weight: 700;
+  font-size: clamp(.2rem, 1.56vw + 1rem, 5rem);
+  font-weight: 600;
   letter-spacing: 0.8px;
   line-height: 1;
   margin-bottom: 20px;
@@ -49,12 +80,13 @@
 
 .banner p {
   color: #B8B8B8;
-  font-size: clamp(.8rem, .5rem + .8vw, 1.5rem);
+  font-size: clamp(.3rem, .5rem + .8vw, 1.5rem);
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
   height: 100%;
 }
+
 
 .banner button {
   color: var(--gold);
@@ -87,11 +119,14 @@
 
 }
 
-@media (max-width: 769px) {
-  .banner img {
-    display: none;
-  }
-}
+// @media (max-width: 769px) {
+//   .banner img {
+//     display: block;
+//     position: relative;
+//     top:-59vh;
+//   }
+
+// }
 
 @keyframes updown {
   0% {

@@ -1,6 +1,6 @@
 .contact {
   background: linear-gradient(115deg, #00366b, var(--mid-blue));
-  padding: 60px 0 200px 0;
+  padding: 60px 0 80px 0;
   z-index: 1;
 }
 
@@ -85,4 +85,12 @@
 
 .contact form button:hover::before {
   width: 100%;
+}
+@media (max-width:549px) {
+  .contact{
+    padding: 60px 0 40px 0;
+  }
+  .row{
+   padding: 6px;
+  }
 }

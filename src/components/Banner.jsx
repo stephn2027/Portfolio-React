@@ -55,7 +55,7 @@ export default function Banner() {
     <Router>
       <section className="banner" id="home">
         <Container>
-          <Row className=" d-flex align-items-start">
+          <Row className="d-flex align-items-start">
             <Col xs={12} md={6} xl={7} className="banner_text">
               <TrackVisibility>
                 {({ isVisible }) => (
@@ -88,6 +88,7 @@ export default function Banner() {
                 )}
               </TrackVisibility>
             </Col>
+
             <Col xs={12} md={6} xl={5} className="header_img">
               <TrackVisibility>
                 {({ isVisible }) => (
