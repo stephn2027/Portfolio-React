@@ -35,28 +35,7 @@ export default function Projects() {
                       id="pills-tab"
                       className="nav-pills mb-5 justify-content-center align-items-center"
                     >
-                      <Nav.Item>
-                        <Nav.Link
-                          eventKey="first"
-                          color="primary"
-                          id="projects-tabs-tab-first"
-                        >
-                          Tab 1
-                        </Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link
-                          eventKey="second"
-                          id="projects-tabs-tab-second"
-                        >
-                          Tab2 2
-                        </Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="third" id="projects-tabs-tab-third">
-                          Tab 3
-                        </Nav.Link>
-                      </Nav.Item>
+                     
                     </Nav>
                   </div>
                 )}

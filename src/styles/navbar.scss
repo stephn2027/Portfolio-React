@@ -7,11 +7,14 @@ nav.navbar {
     z-index: 99999;
     transition: 0.32s ease-in-out;
 
+
 }
 
 nav.navbar.scrolled {
-    padding: 0px 0;
+    padding: 10px 0px;
     background-color: var(--mid-blue);
+    width: 100vw;
+
 }
 
 nav.navbar a.navbar-brand {
@@ -36,10 +39,11 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 span.navbar-text {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-nav.navbar a.navbar-brand{
-    width: clamp(4rem, 3rem + 3vw , 10rem);
+nav.navbar a.navbar-brand {
+    width: clamp(4rem, 3rem + 3vw, 10rem);
 }
 
 .social-icon {
@@ -127,7 +131,8 @@ nav.navbar a.navbar-brand{
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
     outline: none;
-    box-shadow: none;
+    box-shadow:none;
+   
 }
 
 nav.navbar .navbar-toggler-icon {
@@ -141,7 +146,7 @@ nav.navbar .navbar-toggler-icon {
 }
 
 nav.navbar .navbar-toggler-icon:focus {
-    border-bottom: 2px solid #fff;
+    border-bottom: 20px solid #fff;
 }
 
 nav.navbar .navbar-toggler-icon:after,
@@ -176,5 +181,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     border-color: transparent;
+
+}
+
+@media (max-width:749px) {
+    .navbar-text{
+        display: flex;
+    }
+    .navbar-text button {
+        margin-right: 1.5rem;
+
+    }
+
+
+    nav.navbar.navbar-expand-lg.navbar-light {
+       width: 100vw;
+
+    }
+
 
 }
