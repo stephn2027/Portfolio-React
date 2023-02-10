@@ -25,28 +25,17 @@ export default function NavBar() {
 
   const onUpdateLink = (value) => setActiveLink(value);
 
-  const handleToggleClick = ()=>{
-    console.log("clicked");
-  }
-
   return (
     <Router>
       <TrackVisibility>
         {({ isVisible }) => (
-          <div
-            className={
-              isVisible
-                ? 'animate__animated animate__fadeIn'
-                : ''
-            }
-          >
+          <div className={isVisible ? 'animate__animated animate__fadeIn' : ''}>
             <Navbar expand="lg" className={isScrolled ? 'scrolled' : ''}>
               <Container>
                 <Navbar.Brand href="#home">
                   <img src={logo} alt="Logo" />
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" onclick={ handleToggleClick}
-                  >
+                <Navbar.Toggle aria-controls="basic-navbar-nav">
                   <span className="navbar-toggler-icon"></span>
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
