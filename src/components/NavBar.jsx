@@ -30,7 +30,7 @@ export default function NavBar() {
       <TrackVisibility>
         {({ isVisible }) => (
           <div className={isVisible ? 'animate__animated animate__fadeIn' : ''}>
-            <Navbar expand="lg" className={isScrolled ? 'scrolled' : ''}>
+            <Navbar expand="lg" className={isScrolled ? 'scrolled' : 'scroll-passive'}>
               <Container>
                 <Navbar.Brand href="#home">
                   <img src={logo} alt="Logo" />

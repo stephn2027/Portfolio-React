@@ -7,6 +7,7 @@
   background-repeat: no-repeat;
   display: flex;
   height: 100vh;
+  z-index: 2;
 
   &_text {
 
@@ -119,7 +120,9 @@
 .banner img {
   position: relative;
   top: -1rem;
-
+}
+.header_img{
+  z-index: 0;
 }
 
 // @media (max-width: 769px) {

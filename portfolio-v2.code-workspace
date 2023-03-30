@@ -4,16 +4,10 @@
 			"path": "."
 		},
 		{
-			"path": "../../portfolio"
-		},
-		{
-			"path": "../../FCCweb"
-		},
-		{
-			"path": "../temp-convert"
+			"path": "../Typescript project"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "temp-convert"
+		"liveServer.settings.multiRootWorkspaceName": "strata-frontend-exercise"
 	}
 }
