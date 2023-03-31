@@ -15,7 +15,9 @@
 
     &_wrap {
       height: 38vh;
-
+      .wrap{
+        color: var(--magenta-purple);
+      }
     }
 
     &_p {
