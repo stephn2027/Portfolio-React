@@ -11,7 +11,7 @@ const ProjectsDetails = [
       title: 'Team Devs',
       description: 'React + Vite + TypeScript + Tailwind',
       imgUrl: proj1,
-      projectUrl:'https://github.com/Taching/vite-starter/tree/develop',
+      projectUrl:'https://vite-starter-gold.vercel.app',
     },
     {
       title: 'Car Navigation and Rental',
