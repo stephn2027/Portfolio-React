@@ -103,8 +103,9 @@ export default function Contact() {
                           }
                         />
                       </Col>
-                      <Col>
+                      <Col sm={12} md={12} xs={12} className='px-1'>
                         <textarea
+                          
                           rows="6"
                           value={formDetails.message}
                           placeholder="Message"
@@ -112,9 +113,12 @@ export default function Contact() {
                             onFormUpdate('message', e.target.value)
                           }
                         />
-                        <button type="submit">
+                        <div className='text-center'>
+                        <button type="submit" className='btn-submit'>
                           <span>{buttonText}</span>
                         </button>
+                        </div>
+                        
                       </Col>
                       {status.message && (
                         <Col>

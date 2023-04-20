@@ -16,7 +16,7 @@
     width: 36%;
 }
 
-.footer p {
+.footer p{
     font-weight: 400;
     font-size: 14px;
     color: #B8B8B8;
@@ -26,11 +26,19 @@
 
 @media (max-width:749px) {
     .social-icon {
-        justify-items: end;
-        margin-right: -6rem;
+        display: flex;
+        justify-items: center;
+        
     }
 
     .footer {
-        padding: 20px 0 10px 0;
+        padding: 20px 0 10px 0; 
+    
     }
+    .p-footer{
+       position: relative;
+       right: 15%;
+       left: -15%;
+    }
+  
 }

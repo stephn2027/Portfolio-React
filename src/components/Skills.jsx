@@ -60,9 +60,10 @@ export default function Skills() {
               >
                 {skills.map((skill) => {
                   return (
-                    <TrackVisibility>
+                    <TrackVisibility key={skill.id}>
                       {({ isVisible }) => (
                         <div
+                          
                           className={
                             isVisible
                               ? 'animate__animated animate__slideInRight animate__slow'

@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="footer">
       <Container>
         <Row className="align-items-center footer__row">
-          <Col lg={12} className="text-center text-md-end">
+          <Col lg={12} className="text-center text-md-end text-xs-center">
             <div className="social-icon">
               <a
                 href="https://www.linkedin.com/in/stephen-uy-90268a209/"
@@ -34,8 +34,15 @@ export default function Footer() {
                 <img src={navIcon2} alt="" />
               </a>
             </div>
+            <div className='p-footer'>
             <p>CopyRight 2023. All Rights Reserved</p>
+            </div>
+            
+            
+            
+            
           </Col>
+          
         </Row>
       </Container>
     </footer>
