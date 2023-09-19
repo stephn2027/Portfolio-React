@@ -99,7 +99,7 @@ export default function Banner() {
                         : 'animate__animated animate__flipOutY'
                     }
                   >
-                    <img src={headerImg} alt="Header Img" />
+                    <img src={headerImg} width='500px' height='500px' alt="Header Img" />
                   </div>
                 )}
               </TrackVisibility>
